@@ -1,0 +1,65 @@
+// Customizing Bootstrap with Sass variables:
+// https://getbootstrap.com/docs/5.0/customize/sass/
+
+// $primary: #276fc2;
+// $secondary: #e8d21d;
+// $border-radius: 1px;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+body {
+  margin-top: 100px;
+  background-color: black;
+  color: white;
+}
+.bg-body-tertiary {
+  --bs-bg-opacity: 0.12;
+  background-color: gray;
+  color: white;
+}
+.nav {
+  color: white;
+}
+.scrollspyHeading {
+  margin: 30px;
+}
+.texto {
+  margin: 50px;
+}
+.scrollspyHeading2 {
+  display: flex;
+  justify-content: right;
+}
+h6 {
+  --bs-bg-opacity: 0.12;
+  color: gray;
+}
+.navbar-brand {
+  color: white;
+}
+#navbar-example2 {
+  --bs-bg-opacity: 1;
+  background-color: black !important;
+}
+a.nav-link {
+  color: aqua;
+}
+.navbar-toggler-icon {
+  color: white;
+  background-color: aqua;
+  border-color: red;
+}
+
+//Sobre
+#sobre {
+  margin-bottom: 250px;
+}
+#objetivo {
+  text-align: end;
+}
+#contato {
+  text-align: center;
+}
+#formacao {
+  text-align: end;
+}
