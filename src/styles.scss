@@ -8,28 +8,45 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 body {
-  margin-top: 100px;
-  background-color: black;
+  background-image: url(bg_dev.png);
+  background-color: rgb(6, 6, 31);
   color: white;
 }
 .bg-body-tertiary {
   --bs-bg-opacity: 0.12;
-  background-color: gray;
+  background: rgba(255, 255, 255, 0.2); /* Cor branca com opacidade para criar o efeito translúcido */
   color: white;
+  backdrop-filter: blur(10px);
+  margin: 0 50px;
 }
 .nav {
   color: white;
+  position: fixed;
 }
 .scrollspyHeading {
+  padding-top: 70px;
   margin: 30px;
+  
 }
+.cursor {
+  display: inline-block;
+  width: 2px;
+  background-color: aqua;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 .texto {
   margin: 50px;
+  overflow: auto; /* Limpa o float para evitar problemas de layout */
 }
-.scrollspyHeading2 {
-  display: flex;
-  justify-content: right;
-}
+
 h6 {
   --bs-bg-opacity: 0.12;
   color: gray;
@@ -39,21 +56,59 @@ h6 {
 }
 #navbar-example2 {
   --bs-bg-opacity: 1;
-  background-color: black !important;
+  background-color: #070c16 !important;
+  margin: 0;
 }
 a.nav-link {
   color: aqua;
+  text-shadow: 0px 0px 5px aqua;
 }
-.navbar-toggler-icon {
+.nav-link.show{
+  color: green;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: #ffffff;
+  text-shadow: 0 0 5px white;
+}
+a.nav-link.active{
   color: white;
-  background-color: aqua;
+}
+span.navbar-toggler-icon {
+  color: white;
+  background-color: grey;
   border-color: red;
+  --bs-bg-opacity: 0.12;
+  color: gray;
+}
+
+.button.nav-toggler{
+color:white;
+
 }
 
 //Sobre
-#sobre {
-  margin-bottom: 250px;
+#conteudo {
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
 }
+#fotoPerfil{
+  height: 30%;
+  width: 30%;
+  float: left; /* Faz a imagem flutuar à esquerda */
+  justify-items: end;
+}
+#scrollspyHeading1{
+  
+}
+.scrollspyHeading2 {
+  display: flex;
+  text-align: end;
+}
+.titulo{
+  flex:block;
+}
+
 #objetivo {
   text-align: end;
 }
@@ -62,4 +117,35 @@ a.nav-link {
 }
 #formacao {
   text-align: end;
+  
+}
+
+//BOTAO VOLTAR
+
+/* Estilizando o botão */
+#topBtn {
+  display: none; /* O botão ficará oculto até que o usuário role a página */
+  position: fixed; /* Fica fixo no canto da tela */
+  bottom: 20px; /* Distância do botão em relação ao fundo da página */
+  right: 30px; /* Distância do botão em relação à lateral direita */
+  z-index: 99; /* Certifique-se de que o botão fique por cima de outros elementos */
+  border: none; /* Sem bordas */
+  outline: none; /* Sem contorno */
+  background-color: rgba(255, 255, 255, 0.18); /* Fundo preto com 50% de opacidade */
+  color: black; /* Cor do texto */
+  cursor: pointer; /* Cursor de ponteiro */
+  width: 50px; /* Largura do botão */
+  height: 50px; /* Altura do botão */
+  border-radius: 50%; /* Bordas arredondadas */
+  font-size: 20px; /* Tamanho da fonte */
+  font-weight: bold; /* Deixa o texto (seta) em negrito */
+
+  display: flex; /* Ativa o flexbox */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Efeito hover */
+#topBtn:hover {
+  background-color: #333; /* Cor ao passar o mouse */
 }

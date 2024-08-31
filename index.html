@@ -13,16 +13,18 @@
   </head>
 
   <body class="p-4">
+
     <div id="navbar">
       <header class="mb-auto">
         <nav
           id="navbar-example2"
-          class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top px-3 mb-3"
+          class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top px-3"
         >
-          <a class="navbar-brand" href="#"
-            ><strong>Paloma Souza</strong><br />
-            <h6><i>Tecnologia da Informação</i></h6></a
-          >
+          <a class="navbar-brand" href="#">
+            <strong id="typed-name">Paloma Souza</strong><br />
+            <h6 id="typed-title"><i>Tecnologia da Informação</i></h6>
+          </a>
+
           <button
             class="navbar-toggler"
             type="button"
@@ -43,10 +45,10 @@
                 <a class="nav-link" href="#scrollspyHeading2">Objetivo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#scrollspyHeading3">Formação</a>
+                <a class="nav-link" href="#scrollspyHeading4">Experiência</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#scrollspyHeading4">Experiência</a>
+                <a class="nav-link" href="#scrollspyHeading3">Formação</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#scrollspyHeading5">Habilidades</a>
@@ -70,18 +72,14 @@
                   aria-labelledby="navbarDropdownMenuLink"
                 >
                   <li>
-                    <a class="dropdown-item" href="#scrollspyHeading3">Sobre</a>
+                    <a class="dropdown-item" href="#scrollspyHeading1">Sobre</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#scrollspyHeading4"
-                      >Experiência</a
-                    >
+                    <a class="dropdown-item" href="#scrollspyHeading4">Experiência</a>
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
-                    <a class="dropdown-item" href="#scrollspyHeading5"
-                      >Habilidades</a
-                    >
+                    <a class="dropdown-item" href="#scrollspyHeading5">Habilidades</a>
                   </li>
                 </ul>
               </li>
@@ -98,39 +96,44 @@
           tabindex="0"
         >
           <div id="sobre" class="scrollspyHeading">
-            <h4 id="scrollspyHeading1">Quem sou</h4>
-            <p class="texto">
-              Sou uma desenvolvedora apaixonada por tecnologia, com experiência
-              em frontend e backend. Minha trajetória inclui estágios
-              relevantes, onde desenvolvi sistemas em .NET e participei de
-              projetos de aplicativos móveis. Adoro aprender e me adaptar a
-              novas tecnologias, com habilidades para trabalhar de forma
-              independente ou em equipe. Estou pronta para enfrentar desafios e
-              contribuir para o sucesso dos projetos em que estou envolvida.
-            </p>
+            <div class="titulo">
+              <h4 id="scrollspyHeading1">Quem sou</h4>
+            </div>
+            <div id="conteudo">
+              <p class="texto">
+                Sou uma desenvolvedora apaixonada por tecnologia, com experiência
+                em frontend e backend. Minha trajetória inclui estágios
+                relevantes, onde desenvolvi sistemas em .NET e participei de
+                projetos de aplicativos móveis. Adoro aprender e me adaptar a
+                novas tecnologias, com habilidades para trabalhar de forma
+                independente ou em equipe. Estou pronta para enfrentar desafios e
+                contribuir para o sucesso dos projetos em que estou envolvida.
+              </p>
+              <img id="fotoPerfil" src="Clipped_image_20240606_175016.png" alt="fotoPerfil">
+            </div>
           </div>
 
           <div id="objetivo" class="scrollspyHeading">
             <h4 id="scrollspyHeading2">Objetivo Profissional</h4>
-            <p class="texto">
-              Busco oportunidades para expandir minhas habilidades em
-              desenvolvimento de sistemas, com foco em contribuir para o
-              crescimento da empresa e, ao mesmo tempo, aperfeiçoar minhas
-              competências profissionais.
-            </p>
+            <div id="conteudo">
+              <p class="texto">
+                Busco oportunidades para expandir minhas habilidades em
+                desenvolvimento de sistemas, com foco em contribuir para o
+                crescimento da empresa e, ao mesmo tempo, aperfeiçoar minhas
+                competências profissionais.
+              </p>
+            </div>
           </div>
 
           <div id="experiencia" class="scrollspyHeading">
-            <h4 id="scrollspyHeading4" class="type2">
-              Experiência profissional
-            </h4>
+            <h4 id="scrollspyHeading4" class="type2">Experiência profissional</h4>
             <p class="texto">
               <strong>Fapeg</strong> - Estagiária em Desenvolvimento
               <u>Frontend</u>
               <br />
               <i>[Março 2023 - Outubro 2023]</i>
               <br />
-              • Implementação de interfaces interativas e para o aplicativo
+              • Implementação de interfaces interativas para o aplicativo
               "Caminho da Roça".
               <br />• Desenvolvimento com React Native para otimização de
               interfaces e usabilidade.
@@ -159,14 +162,12 @@
           <div id="formacao" class="scrollspyHeading">
             <h4 id="scrollspyHeading3">Formação acadêmica</h4>
             <p class="texto">
-              <strong>IESB</strong> -
-              <u>Análise e Desenvolvimento de Sistemas</u>
+              <strong>IESB</strong> - <u>Análise e Desenvolvimento de Sistemas</u>
               <br />
               <i>Em andamento - Previsão de Conclusão: 2025</i>
             </p>
             <p class="texto">
-              <strong>IESB</strong> -
-              <u>Bacharelado em Engenharia da Computação</u>
+              <strong>IESB</strong> - <u>Bacharelado em Engenharia da Computação</u>
               <br />
               <i>Trancado</i>
             </p>
@@ -193,8 +194,32 @@
               • linkedin.com/in/paloma-rodrigues-804319234/ <br />
             </p>
           </div>
+          
+          
+
         </div>
+        <!-- Botão Voltar para o Topo -->
+        <button onclick="topFunction()" id="topBtn" title="Voltar para o topo">↑</button>
       </header>
     </div>
+
+    <script>
+      // Quando o usuário rolar para baixo 20px a partir do topo da página, mostre o botão
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("topBtn").style.display = "block";
+        } else {
+          document.getElementById("topBtn").style.display = "none";
+        }
+      }
+
+      // Quando o usuário clicar no botão, role suavemente para o topo da página
+      function topFunction() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      }
+    </script>
+    
   </body>
 </html>
