@@ -85,3 +85,44 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
+//EFEITO DIGITANDO
+
+document.addEventListener('DOMContentLoaded', function () {
+    const typedTextElement = document.getElementById('typed-name');
+    const typedSubtextElement = document.getElementById('typed-title');
+
+    // Definição do texto principal e subtexto
+    const text = 'Paloma Souza';
+    const subtext = 'Tecnologia da Informação';
+    const typingDelay = 150;
+    const newTextDelay = 2000; // Delay após o texto ser digitado
+    let textIndex = 0;
+    let subtextIndex = 0;
+
+    // Adiciona o cursor piscando
+    const cursor = document.createElement('span');
+    cursor.className = 'cursor';
+    cursor.textContent = '|'; // Forma do cursor
+    typedTextElement.appendChild(cursor);
+
+    function type() {
+        // Verifica se ainda há caracteres para digitar no texto principal
+        if (textIndex < text.length) {
+            cursor.before(text.charAt(textIndex));
+            textIndex++;
+            setTimeout(type, typingDelay);
+        } 
+        // Passa para o subtexto após o texto principal
+        else if (subtextIndex < subtext.length) {
+            typedSubtextElement.textContent += subtext.charAt(subtextIndex);
+            subtextIndex++;
+            setTimeout(type, typingDelay);
+        }
+    }
+
+    // Iniciar o efeito de digitação
+    type();
+});
+
+
+
