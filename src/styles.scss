@@ -11,12 +11,14 @@ body {
   background-image: url(bg_dev.png);
   background-color: rgb(6, 6, 31);
   color: white;
+  backdrop-filter: blur(3px);
+
 }
 .bg-body-tertiary {
   --bs-bg-opacity: 0.12;
   background: rgba(255, 255, 255, 0.2); /* Cor branca com opacidade para criar o efeito translúcido */
   color: white;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(100px) !important;
   margin: 0 50px;
 }
 .nav {
